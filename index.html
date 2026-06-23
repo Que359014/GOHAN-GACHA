@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>ごはんガチャ</title>
+
+  <!-- フォント（外部から読み込み） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- 見た目は style.css にすべて書く -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1 class="title">ごはんガチャ<span class="dot"></span></h1>
+    <p class="subtitle">今日のごはん迷ったら回す。</p>
+  </header>
+
+  <div class="stage">
+    <div class="machine" id="machine">
+      <div class="dome" id="dome"></div>
+      <div class="neck"></div>
+      <div class="body">
+        <div class="panel">
+          <div class="coin"></div>
+          <div class="knob" id="knob"></div>
+        </div>
+        <div class="label">GOHAN GACHA</div>
+        <div class="tray"><div class="drop" id="drop"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <button class="spin" id="spinBtn">ガチャを回す</button>
+
+  <!-- 結果ポップアップ -->
+  <div class="overlay" id="overlay">
+    <div class="card">
+      <button class="close" id="closeBtn" aria-label="閉じる">×</button>
+      <div class="burst" id="burst">🍛</div>
+      <p class="eyebrow">今日のごはんは…</p>
+      <h2 class="meal" id="mealName">カレーライス</h2>
+      <p class="note" id="mealNote"></p>
+      <div class="tag" id="mealTag"></div>
+      <button class="again" id="againBtn">もう一回まわす</button>
+      <p class="count" id="count"></p>
+    </div>
+  </div>
+
+  <div class="confetti" id="confetti"></div>
+
+  <!-- 動きは script.js にすべて書く（bodyの最後で読み込むのが定石） -->
+  <script src="script.js"></script>
+</body>
+</html>
