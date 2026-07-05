@@ -55,6 +55,13 @@ header{text-align:center;margin-bottom:10px;}
   font-size:clamp(13px,3.6vw,15px);
   color:var(--ink-soft);
 }
+.today-count{
+  margin-top:8px;
+  font-weight:900;
+  font-size:13px;
+  color:var(--red-dark);
+  min-height:18px; /* 0回のとき高さがガタつかないように */
+}
 
 /* ───── ガチャ本体 ───── */
 .stage{position:relative;width:100%;max-width:340px;margin-top:8px;}
@@ -184,11 +191,34 @@ header{text-align:center;margin-bottom:10px;}
 .eyebrow{font-weight:700;color:var(--ink-soft);font-size:14px;margin:4px 0 2px;}
 .meal{font-weight:900;font-size:clamp(28px,8vw,36px);color:var(--red-dark);margin:2px 0 10px;}
 .note{font-weight:700;font-size:15px;color:var(--ink);line-height:1.6;}
+.cal{font-weight:900;font-size:14px;color:var(--red-dark);margin-top:8px;}
+.tagRow{
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;flex-wrap:wrap;margin-top:16px;
+}
 .tag{
-  display:inline-block;margin-top:16px;
+  display:inline-block;
   background:var(--teal);color:#fff;font-weight:900;
   font-size:13px;padding:7px 16px;border-radius:999px;
   box-shadow:0 4px 0 #229b80;
+}
+.recipeBtn{
+  border:none;cursor:pointer;font-family:inherit;font-weight:900;
+  font-size:12px;color:var(--red-dark);background:#fff;
+  padding:7px 14px;border-radius:999px;
+  box-shadow:0 3px 0 #e8d9cf, inset 0 0 0 2px rgba(226,59,59,.25);
+  transition:transform .08s, box-shadow .08s;
+}
+.recipeBtn:active{transform:translateY(3px);box-shadow:0 0 0 #e8d9cf, inset 0 0 0 2px rgba(226,59,59,.25);}
+.recipe{
+  max-height:0;overflow:hidden;opacity:0;
+  font-weight:700;font-size:13px;color:var(--ink-soft);line-height:1.6;
+  text-align:left;background:#fff;border-radius:12px;
+  margin-top:0;padding:0 14px;
+  transition:max-height .3s ease, opacity .3s ease, margin-top .3s ease, padding .3s ease;
+}
+.recipe.open{
+  max-height:200px;opacity:1;margin-top:12px;padding:12px 14px;
 }
 .again{
   margin-top:22px;width:100%;border:none;cursor:pointer;
