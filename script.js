@@ -54,9 +54,7 @@ const RECIPE_OVERRIDES = {
 function recipeUrl(mealName){
   if (RECIPE_OVERRIDES[mealName]) return RECIPE_OVERRIDES[mealName];
   // 料理名を検索用に安全な形（URLエンコード）にしてクックパッドの検索に渡す
-  //return 'https://cookpad.com/jp/search/' + encodeURIComponent(mealName); //クックパッド
   return 'https://delishkitchen.tv/search?q=' + encodeURIComponent(mealName); //デリッシュキッチン
-  
 }
 
 /* ドーム内に浮かぶカプセルを並べる（座標を決め打ちで配置） */
