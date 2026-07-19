@@ -15,8 +15,8 @@
 </head>
 <body>
   <header>
-    <h1 class="title">ごはんガチャ<span class="dot"></span></h1>
-    <p class="subtitle">今日のご飯を決める</p>
+    <h1 class="title">ごはんガチャ<span class="dot">.</span></h1>
+    <p class="subtitle">今日のごはん、迷ったら回す。</p>
     <p class="today-count" id="todayCount"></p>
   </header>
 
@@ -45,12 +45,10 @@
       <p class="eyebrow">今日のごはんは…</p>
       <h2 class="meal" id="mealName">カレーライス</h2>
       <p class="note" id="mealNote"></p>
-      <p class="cal" id="mealCal"></p>
-      <div class="tagRow">
-        <div class="tag" id="mealTag"></div>
-        <button class="recipeBtn" id="recipeBtn">作り方を見る</button>
-      </div>
-      <p class="recipe" id="recipeText"></p>
+      <div class="tag" id="mealTag"></div>
+      <a class="recipe" id="recipeBtn" href="#" target="_blank" rel="noopener">
+        <span class="recipe-icon">🔍</span>作り方を見る
+      </a>
       <button class="again" id="againBtn">もう一回まわす</button>
       <p class="count" id="count"></p>
     </div>
